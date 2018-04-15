@@ -229,7 +229,25 @@ function createDataContent(feature, iconUrl) {
         }
         
         if (feature.properties.投票区区域 != "") {
-            popupContents += "<tr><td>区域　</td><td>" + feature.properties.投票区区域 + "</td></tr>" ;
+            var ignoreComma = false ;
+            var area = "" ; 
+
+            for (var i=0; i<feature.properties.投票区区域.length; i++) {
+
+                var c = feature.properties.投票区区域[i] ;
+
+                if (!ignoreComma && feature.properties.投票区区域[i] == ',') {
+                    c = '<br />' ;
+                } else if (feature.properties.投票区区域[i] == '(') {
+                    ignoreComma = true ;
+                } else if (feature.properties.投票区区域[i] == ')') {
+                    ignoreComma = false ;
+                }
+
+                area += c ;
+            }
+        
+            popupContents += '<tr><td>区域　</td><td class="area">' + area + "</td></tr>" ;
         }
         
         popupContents += "</table>" ;

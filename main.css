@@ -46,3 +46,9 @@ html, body, #map {
 .text {
     margin: 5px;
 }
+
+.area {
+    color: blue;
+    font-weight: bold;
+    line-height: 1.5;
+}
