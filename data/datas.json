@@ -1,0 +1,14 @@
+{
+    "entries":[
+        {
+            "name" : "投票所",
+            "url" : "./data/geojson/touhyoujo.geojson",
+            "iconUrl" : "./data/icon/child_icon01.png"
+        },
+        {
+            "name" : "期日前投票所",
+            "url" : "./data/geojson/kijituzentouhyoujo.geojson",
+            "iconUrl" : "./data/icon/child_icon02.png"
+        }
+    ]
+}
